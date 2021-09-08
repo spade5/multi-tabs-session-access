@@ -120,5 +120,6 @@ export default class SharedSession {
     }
     clear() {
         sessionStorage.removeItem(SHARED_SESSION_KEY)
+        this.syncData()
     }
 }
