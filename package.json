@@ -1,8 +1,8 @@
 {
   "name": "shared-session",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "多 tab 共享 sessionStorage 解决方案",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",

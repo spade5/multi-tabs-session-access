@@ -7,13 +7,11 @@ let count = 0
 
 btn && btn.addEventListener('click', () => {
   count++
-  session.setItem('count', count + '')
+  SharedSession.setItem('count', count + '')
 })
 
-const session = new SharedSession()
-
-session.onChange(() => {
-  session.getItem('count').then((value) => {
+SharedSession.listen(() => {
+  SharedSession.getItem('count').then((value) => {
     if (value) {
       count = +value
       changeValue()
@@ -21,7 +19,7 @@ session.onChange(() => {
   })
 })
 
-session.getItem('count').then((value) => {
+SharedSession.getItem('count').then((value) => {
   if (value) {
     count = +value
     changeValue()

@@ -12,26 +12,23 @@ yarn add shared-session
 ```js
 import SharedSession from 'shared-session'
 
-//初始化
-const session = new SharedSession()
-
 //监听数据变化
-session.onChange((data) => {
+SharedSession.listen((data) => {
     console.log(data)
 })
 
 //获取数据
-session.getItem('key').then((value) => {
+SharedSession.getItem('key').then((value) => {
     console.log(value)
 })
 
 //更新数据
-session.setItem('key', 'value')
+SharedSession.setItem('key', 'value')
 
 //删除某个字段
-session.removeItem('key')
+SharedSession.removeItem('key')
 
 //清除所有数据
-session.clear()
+SharedSession.clear()
 
 ```
