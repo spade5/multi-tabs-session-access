@@ -84,10 +84,10 @@ class SharedSession {
     }
 
     get dataStr(): string {
-        return sessionStorage.getItem(SHARED_SESSION_KEY) || ''
+        return sessionStorage.getItem(SHARED_SESSION_KEY) || '{}'
     }
     set dataStr(str: string) {
-        sessionStorage.setItem(SHARED_SESSION_KEY, str)
+        sessionStorage.setItem(SHARED_SESSION_KEY, str || '{}')
         this.changeCallback(this.data)
     }
     get data(): {[key: string]: string} {
@@ -132,6 +132,12 @@ class SharedSession {
 const session = new SharedSession()
 
 const Session = {
+    ready() {
+        return session.ready()
+    },
+    getItemSync(key: string) {
+        return session.data && session.data[key]
+    },
     getItem(key: string) {
         return session.getItem(key)
     },
