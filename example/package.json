@@ -12,8 +12,6 @@
     "shared-session": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.8.4",
     "parcel": "1.12.3",
     "typescript": "^3.4.5"
   }
