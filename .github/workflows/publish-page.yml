@@ -14,9 +14,16 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm ci
+      - run: 
+        name: install and build
+        command: |
+          npm ci
+          npm run build
         working-directory: ./example
-      - run: npm run build
-        working-directory: ./example
-      - run: npm run page
+      - run: 
+        name: publish page
+        command: |
+          git config user.email "spade5@spade5.name"
+          git config user.name "spade5"
+          npm run page
         working-directory: ./example
