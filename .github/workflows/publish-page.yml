@@ -14,8 +14,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Build Page
-      - working-directory: ./example
       - run: npm ci
+        working-directory: ./example
       - run: npm run build
+        working-directory: ./example
       - run: gh-pages -d ./dist
+        working-directory: ./example
