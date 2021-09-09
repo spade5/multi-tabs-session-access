@@ -14,8 +14,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-          registry-url: https://registry.npmjs.org
       - run: cd example/
       - run: npm ci
-      - run: npm build
+      - run: npm run build
+      - run: cd ..
+      - run: npm ci
       - run: gh-pages -d dist

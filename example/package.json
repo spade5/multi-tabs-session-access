@@ -8,7 +8,6 @@
     "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
-    "gh-pages": "^3.2.3",
     "react-app-polyfill": "^1.0.0",
     "shared-session": "^1.0.1"
   },
