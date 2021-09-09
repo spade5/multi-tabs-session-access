@@ -20,8 +20,8 @@ jobs:
           npm run build
         working-directory: ./example
       - name: publish page
-        run: |
-          git config user.email "spade5@spade5.name"
-          git config user.name "spade5"
-          npm run page
+        uses: crazy-max/ghaction-github-pages@v1
+        with: 
+          target_branch: gh-pages
+          build-dir: dist
         working-directory: ./example
