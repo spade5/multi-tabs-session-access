@@ -14,9 +14,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: cd example/
       - run: npm ci
-      - run: npm run build
-      - run: cd ..
-      - run: npm ci
-      - run: gh-pages -d dist
+      - run: npm run build-page
+      - run: gh-pages -d example/dist
