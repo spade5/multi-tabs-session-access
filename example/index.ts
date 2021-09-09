@@ -1,4 +1,5 @@
 import SharedSession from '../lib/index'
+import './index.css'
 
 const countSpan = document.getElementById('count')
 const btn = document.getElementById('btn')
