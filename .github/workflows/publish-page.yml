@@ -18,5 +18,5 @@ jobs:
         working-directory: ./example
       - run: npm run build
         working-directory: ./example
-      - run: gh-pages -d ./dist
+      - run: npm run page
         working-directory: ./example
