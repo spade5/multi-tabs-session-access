@@ -20,7 +20,7 @@ jobs:
           npm run build
         working-directory: ./example
       - name: publish page
-        uses: crazy-max/ghaction-github-pages@v1
+        uses: crazy-max/ghaction-github-pages@v2.5.0
         with: 
           target_branch: gh-pages
           build_dir: example/dist
