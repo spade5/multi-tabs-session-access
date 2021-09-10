@@ -15,6 +15,7 @@ jobs:
           always-auth: true
           token: ${{ secrets.NPM_TOKEN }}
       - run: npm install
+      - run: echo ${{ secrets.NPM_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
