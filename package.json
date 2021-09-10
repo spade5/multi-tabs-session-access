@@ -21,9 +21,6 @@
   "bugs": {
     "url": "https://github.com/spade5/multi-tabs-session-access/issues"
   },
-  "publishConfig": { 
-    "@foo:registry":"https://registry.npmjs.org/" 
-  },
   "homepage": "https://github.com/spade5/multi-tabs-session-access#readme",
   "devDependencies": {
     "@types/jest": "^27.0.1",
