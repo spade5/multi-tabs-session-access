@@ -13,9 +13,7 @@ jobs:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
           always-auth: true
-          token: ${{ secrets.NPM_TOKEN }}
       - run: npm install
-      - run: echo ${{ secrets.NPM_TOKEN }}
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
