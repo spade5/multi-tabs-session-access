@@ -50,7 +50,6 @@ class SharedSession {
         })
     }
     reply() {  //发出响应，传递数据
-        console.log('reply')
         this.sendMsg({
             type: MSG_TYPE_REPLY,
             payload: this.dataStr
